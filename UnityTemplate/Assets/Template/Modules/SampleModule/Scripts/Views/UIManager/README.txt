@@ -1,0 +1,1 @@
+This dir's Script control UI flow and interactions with Controller though events.
