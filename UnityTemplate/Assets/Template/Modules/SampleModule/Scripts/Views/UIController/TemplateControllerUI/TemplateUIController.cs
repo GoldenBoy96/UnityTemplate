@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Template
 {
-    public class TemplateControllerUI : SingletonMono<TemplateControllerUI>, IReset
+    public class TemplateUIController : SingletonMono<TemplateUIController>, IUIController
     {
         [SerializeField] TemplateController _controller;
 
@@ -14,6 +14,11 @@ namespace Template
 
         [Header("Prefab")]
         [SerializeField] GameObject _templatePrefab;
+
+        [Header("Status")]
+        [SerializeField] bool _ignoredBackKey = false;
+
+        public bool IgnoredBackKey { get => _ignoredBackKey; set => _ignoredBackKey = value; }
 
         public void Reset()
         {
@@ -30,12 +35,12 @@ namespace Template
 
         public void ReceiveInput()
         {
-
+            _controller.ReceiveData(new());
         }
 
         public void ShowOutput()
         {
-
+            Debug.Log(_controller.SendData());
         }
 
     }

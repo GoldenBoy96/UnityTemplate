@@ -11,11 +11,14 @@ namespace Template
         [SerializeField] private AudioClip _clip;
         [Range(0.0f, 1.0f)]
         [SerializeField] private float _volume;
-        string audioName;
         public AudioClip Clip { get => _clip; set => _clip = value; }
         public float Volume { get => _volume; set => _volume = value; }
-        public string AudioName { get => audioName; set => audioName = value; }
+        public string AudioName { get => _clip.name;}
 
+        public override string ToString()
+        {
+            return $"{{{nameof(Clip)}={Clip}, {nameof(Volume)}={Volume.ToString()}, {nameof(AudioName)}={AudioName}}}";
+        }
     }
 
 }

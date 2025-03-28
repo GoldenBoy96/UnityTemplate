@@ -20,8 +20,7 @@ namespace Template
         [SerializeField] private StateA _stateA = new();
         [SerializeField] private StateB _stateB = new();
 
-        public StateA StateA { get => _stateA; private set => _stateA = value; }
-        public StateB StateB { get => _stateB; private set => _stateB = value; }
+        public TemplateModel Data { get => _runtimeModel; set => _runtimeModel = value; }
 
         public void Reset()
         {
@@ -31,7 +30,7 @@ namespace Template
             _runtimeModel = ((ICloneable<TemplateModel>)_templateModel).CloneSelf();
 
             //Assign default state
-            ChangeToState(StateA);
+            ChangeToState(_stateA);
 
         }
 
