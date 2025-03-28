@@ -78,3 +78,6 @@ crashlytics-build.properties
 
 # User Settings
 **/[Uu]ser[Ss]ettings/
+
+# Editor Settings
+UnityTemplate/ProjectSettings/EditorSettings.asset
