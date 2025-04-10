@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Template
 {
-    public class TemplateController : StateController, IReset
+    public class TemplateController : StateControllerMono, IReset
     {
         //The Controller should be used to control State
         //Logic Handle should be put in each State

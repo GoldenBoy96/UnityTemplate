@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace Template
 {
-    public class StateA : State
+    public class StateA : StateMono
     {
-        public override void OnStateEnter(StateController stateController)
+        public override void OnStateEnter(StateControllerMono stateController)
         {
             base.OnStateEnter(stateController);
             Debug.Log("Enter State A");
